@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E378F66-4D74-4A45-A66C-31229F1D45DB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PacMan</RootNamespace>
+    <AssemblyName>PacMan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PacMan.PacManProgram</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="amulware.Graphics">
+      <HintPath>.\amulware.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Cireon.Audio">
+      <HintPath>.\Cireon.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NVorbis">
+      <HintPath>.\NVorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\AI.cs" />
+    <Compile Include="AI\AIEuclidianGhost.cs" />
+    <Compile Include="AI\Placeholders\AIClient.cs" />
+    <Compile Include="AI\Placeholders\AIPlayer.cs" />
+    <Compile Include="AI\AIRandom.cs" />
+    <Compile Include="AI\Placeholders\AIServer.cs" />
+    <Compile Include="AI\AISimpleGhost.cs" />
+    <Compile Include="AI\AISimplePacMan.cs" />
+    <Compile Include="AI\AIEuclidianPacMan.cs" />
+    <Compile Include="AI\Placeholders\AISim.cs" />
+    <Compile Include="GameObjects\CameraGameObject.cs" />
+    <Compile Include="GameObjects\PickupObject.cs" />
+    <Compile Include="Levels\BackgroundLevel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rest\Audio.cs" />
+    <Compile Include="Rest\Camera.cs" />
+    <Compile Include="GameObjects\Ghost.cs" />
+    <Compile Include="Levels\Level.cs" />
+    <Compile Include="GameObjects\PacMan.cs" />
+    <Compile Include="Rest\Library\Network\Client.cs" />
+    <Compile Include="Rest\Graphics.cs" />
+    <Compile Include="Rest\Library\Helpers\GameMath.cs" />
+    <Compile Include="Rest\Library\Helpers\GlobalRandom.cs" />
+    <Compile Include="Rest\Library\Helpers\InputManager.cs" />
+    <Compile Include="Rest\Library\Helpers\KeyboardManager.cs" />
+    <Compile Include="Rest\Library\MenuItem\MenuItem.cs" />
+    <Compile Include="Rest\Library\MenuItem\MenuItemList.cs" />
+    <Compile Include="Rest\Library\MenuItem\MenuItemTextbox.cs" />
+    <Compile Include="Rest\Library\MenuItem\MenuItemYesNo.cs" />
+    <Compile Include="Rest\Library\GameObjects\GameObject.cs" />
+    <Compile Include="Rest\Library\GameObjects\InvisibleGameObject.cs" />
+    <Compile Include="Rest\Library\ParagraphList.cs" />
+    <Compile Include="Rest\Library\Particles\InfiniteParticleEmitter2D.cs" />
+    <Compile Include="Rest\Library\Particles\Particle.cs" />
+    <Compile Include="Rest\Library\Particles\Particle2D.cs" />
+    <Compile Include="Rest\Library\Particles\Particle3D.cs" />
+    <Compile Include="Rest\Library\Particles\ParticleEmitter.cs" />
+    <Compile Include="Rest\Library\Particles\ParticleEmitter2D.cs" />
+    <Compile Include="Rest\Library\Particles\ParticleEmitter3D.cs" />
+    <Compile Include="Rest\Library\Particles\ParticleEmitterText2D.cs" />
+    <Compile Include="Rest\Library\Particles\ParticleSystem.cs" />
+    <Compile Include="Rest\Library\Particles\PercentageArray.cs" />
+    <Compile Include="Rest\Library\Particles\RandomVector2.cs" />
+    <Compile Include="Rest\Library\Particles\RandomVector3.cs" />
+    <Compile Include="Rest\Library\Particles\TextParticle2D.cs" />
+    <Compile Include="Rest\Library\Particles\TextParticle3D.cs" />
+    <Compile Include="Rest\Library\ScreenManager\MenuScreen.cs" />
+    <Compile Include="Rest\Library\ScreenManager\Screen.cs" />
+    <Compile Include="Rest\Library\ScreenManager\ScreenManager.cs" />
+    <Compile Include="Rest\Library\Particles\ParticleEmitterText3D.cs" />
+    <Compile Include="Rest\MultiPlayerInfo.cs" />
+    <Compile Include="Rest\Particles\ScoreText.cs" />
+    <Compile Include="Rest\Library\Network\Server.cs" />
+    <Compile Include="Rest\Settings.cs" />
+    <Compile Include="Rest\MeshData.cs" />
+    <Compile Include="Rest\NormalUVColorVertexData.cs" />
+    <Compile Include="Rest\Program.cs" />
+    <Compile Include="Screens\FindGamesScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\GameMenuScreen.cs" />
+    <Compile Include="Screens\LobbyScreen.cs" />
+    <Compile Include="Screens\FavMenuScreen.cs" />
+    <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\HowToPlayScreen.cs" />
+    <Compile Include="Screens\TitleScreen.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="data\fonts\freshman.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\fonts\freshman_monospaced_numbers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\models\Ghost.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\models\Orb.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\models\Pacman.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\models\Pacman_mouth.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\shaders\obj_vs_hax.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\shaders\obj_fs.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\shaders\obj_vs.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\shaders\uvcolor_fs.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\shaders\uvcolor_vs.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\sounds\omnomnom1.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\sounds\omnomnom2.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\sounds\omnomnom3.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\sounds\omnomnom4.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\fonts\freshman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\levels\level1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\levels\level2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\levels\level3.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\levels\level4.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\levels\level5.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\levels\level6.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\sprites\GhostTexture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\sprites\OrbTexture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\sprites\PacmanTexture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\sprites\WallTexture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="openal32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

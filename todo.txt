@@ -1,0 +1,28 @@
+PacMan todo:
+- Multiplayer bugs: Pausing, score (maintain at dying), lobby start with player at -1
+- Ms PacMan
+- Better AI's
+- Add cherries and strawberries
+- Fancy stuff (juice it)
+    - When dying make the ghost fly to you (or fly the camera into the ghost and than spawn upwards and view 'the board')
+      (Also when starting the game, fly from top into position).
+    - Camera follow indirectly
+    - Text effects
+    - Particles
+        - After eating orb
+        - After eating ghost
+        - After dying (eating PacMan)
+    - Excitement effects when enemies get close (or you get close to PacMan)
+        (Zooming in and out, red glow around screen)
+    - More screen shake
+- Music
+- Sound effects
+    - Eating orb
+    - Eating super orb
+    - Dying
+    - Eating a ghost
+    - Ghost respawn
+    - Teleporting
+    - Bumping into a wall
+    - (Ghosts getting close)
+
